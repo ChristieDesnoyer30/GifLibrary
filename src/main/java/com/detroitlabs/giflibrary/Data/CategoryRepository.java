@@ -44,6 +44,7 @@ public class CategoryRepository {
             }
         }
 
+        System.out.println(idNumber);
         return idNumber;
     }
 

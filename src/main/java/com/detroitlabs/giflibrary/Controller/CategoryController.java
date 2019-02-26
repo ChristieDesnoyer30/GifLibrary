@@ -46,7 +46,7 @@ public class CategoryController {
     }
 
 
-  @RequestMapping("/gif/search?q={name}")
+  @RequestMapping("searchhome?q={name}")
   public String showGifsInCategoryByName(String name, ModelMap modelMap){
 
         int idFromName = categoryRepository.searchCategoryNameToId(name);

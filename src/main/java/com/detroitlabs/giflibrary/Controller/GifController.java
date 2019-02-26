@@ -38,15 +38,15 @@ public class GifController {
     }
 
 
-//    @RequestMapping("/gif/search/{name}")
-//    public String gifSearchDetails(@RequestParam("q") String name, ModelMap modelMap) {
-//
-//        String returnedValue = searchedGifDetails(name, modelMap);
-//
-//        return returnedValue;
-//    }
-//
-//
+    @RequestMapping("/gif/search/{name}")
+    public String gifSearchDetails(@RequestParam("q") String name, ModelMap modelMap) {
+
+        String returnedValue = searchedGifDetails(name, modelMap);
+
+        return returnedValue;
+    }
+
+
     @RequestMapping("search")
     public String searchedGifDetails(@RequestParam("q") String name, ModelMap modelMap) {
 
@@ -55,10 +55,9 @@ public class GifController {
         if (gif != null) {
             modelMap.put("gif", gif);
             return "gif-details";
-        } else {
-
-            return "home";
         }
+
+        return null;
 
     }
 
