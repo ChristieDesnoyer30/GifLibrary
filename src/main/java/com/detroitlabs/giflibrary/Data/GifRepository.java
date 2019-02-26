@@ -41,7 +41,7 @@ public class GifRepository {
 
 
         for (Gif gif : ALL_GIFS) {
-            if (gif.getName().equalsIgnoreCase(name)) {
+            if (gif.getName().contains(name)) {
                 return gif;
             }
 
